@@ -384,6 +384,7 @@ from dash import html
 external_stylesheets = ['style.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+app.title = 'Auvergne Rhone-Alpes'
 
 # Define the layout
 app.layout = html.Div(
