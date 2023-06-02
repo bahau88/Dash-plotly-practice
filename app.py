@@ -384,6 +384,7 @@ from dash import html
 external_stylesheets = ['style.css']
 
 app = dash.Dash(__name__, external_stylesheets=external_stylesheets)
+server = app.server
 app.title = 'Auvergne Rhone-Alpes'
 
 # Define the layout
@@ -505,7 +506,7 @@ app.layout = html.Div(
                 html.Div(
                     [html.Span("The Region", style={'font-family' : 'calibri', 'font-weight': '300', 'font-size': '20px', 'display': 'block'}),
                     html.Img(src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgaD593j9Yiignmfq2YtP_rMTKRoNeVxdZ76JXDVj0JlN3qO5kimtLIYi8zA1GXRuMWcImIAzU1h8cnNeFqbQoRZvUOreHj2CxmaM6isGIPnUyX9a79WXulfOj8sFM80gCAJvhGi-SBi6WHMTPoytA_tAQTHNP8gVUgrZVsxTaI0nZ48tOiCGrtmxODKg/s320/939px-Auvergne-Rh%C3%B4ne-Alpes_region_map_(DPJ-2020).svg.png", style={'max-width': '100%'}),
-                    html.Span("Auvergne-Rhone Alpes", style={'font-family' : 'calibri', 'font-weight': '300', 'font-size': '14px', 'line-height' : '40px', 'display': 'block'}),
+                    html.Span("Auvergne-Rhône-Alpes is a region in southeast-central France created by the 2014 territorial reform of French regions; it resulted from the merger of Auvergne and Rhône-Alpes. ", style={'font-family' : 'calibri', 'font-weight': '300', 'font-size': '14px', 'line-height' : '40px', 'display': 'block'}),
                     ],
                     style ={'width': '21%',
                             'padding' :'1%',
@@ -627,5 +628,6 @@ app.layout = html.Div(
 
 if __name__ == '__main__':
     app.run_server(debug=True)
+    #app.run_server(debug=False, host="0.0.0.0", port=8080)
 
 
